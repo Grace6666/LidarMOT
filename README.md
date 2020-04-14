@@ -1,5 +1,7 @@
 # LiDAR-Based Multiple Object Tracking
 
+<img align="center" src="https://github.com/Grace6666/LidarMOT/blob/master/video.gif">
+
 **Segmentation and Object Detection**
 1. Extract region of interest
 2. Ground points segment via ground plane fitting
