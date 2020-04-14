@@ -47,3 +47,24 @@ def iou_2d(corners1, corners2, criterion='union'):
     else:
         raise TypeError("Unkown type for criterion")
     return iou_2d
+
+if __name__=='__main__':
+    import os
+    from cv2 import VideoWriter, VideoWriter_fourcc, imread, resize
+    import glob
+
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    ROOT_DIR = os.path.dirname(BASE_DIR)
+    image_folder = os.path.join(ROOT_DIR, 'results/0006/img')
+    image_path = os.path.join(ROOT_DIR, 'results/0006/img', '*.png')
+    images = [img for img in sorted(glob.glob(image_path))]
+
+    img = imread(images[0])
+    height, width, layers = img.shape
+    size = (width, height)
+    out = VideoWriter('../video.avi', VideoWriter_fourcc(*'DIVX'), 5, size)
+
+    for i in range(len(images)):
+        img = imread(images[i])
+        out.write(img)
+    out.release()
