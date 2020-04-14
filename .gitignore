@@ -2,6 +2,6 @@
 
 
 # mypy
-results/img
+results/0006/img/
 src/__pycache__
-video.avi
+video_origin.avi
