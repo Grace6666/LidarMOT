@@ -11,4 +11,4 @@
 2. 2D Assignment based data association
 3. Track management: initialize, confirm and delete tracks
 
-![alt text](https://github.com/Grace6666/LidarMOT/diagram.png)
+![Diagram](https://github.com/Grace6666/LidarMOT/diagram.png)
